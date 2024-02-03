@@ -1,0 +1,29 @@
+{% extends 'donation/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="col-md-12 my-5 row">
+        <div class="col-md-6">
+            <div class="card p-3">
+                <h1 class="text-center h1">Make Donation</h1>
+                <p>Your donations will be use to give needy poor students in villages for a good education.</p>
+            </div>
+        </div> <div class="col-md-6">
+            <div class="card p-3">
+            	<p class="my-2 h3 text-center font-bold">
+            		Pay as you want! 
+            	</p>
+                <form class="form-group" method="post" action="{% url 'index' %}">
+                	{% csrf_token %}
+                	<div class="form-group">
+                		<label class="form-label" for="amount">Amount you want to donate</label>
+                		<input type="number" value="100" name="amount" class="form-control" placeholder="Amount in USD" required>
+                		<small class="text-muted">Amount should be in Taka (BDT)</small>
+                	</div>
+                	<button class="btn btn-primary w-100 my-2">Pay Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

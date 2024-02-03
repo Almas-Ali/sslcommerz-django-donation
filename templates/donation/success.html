@@ -1,0 +1,12 @@
+{% extends 'donation/base.html' %}
+{% block title %}Success{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <p class="text-dark text-center fs-2">
+            Thank you! Your donation has been received. <br>
+            May Allah bless you!  <a href="{% url 'index' %}">Back to home</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

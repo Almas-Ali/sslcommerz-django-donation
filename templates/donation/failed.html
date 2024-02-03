@@ -1,0 +1,12 @@
+{% extends 'donation/base.html' %}
+{% block title %}Failed{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <p class="text-dark text-center fs-2">
+            Sorry, your payment has been failed. <br>
+            Please try again. Thank you! <a href="{% url 'index' %}">Back to home</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
